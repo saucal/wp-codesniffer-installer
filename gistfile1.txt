@@ -1,0 +1,16 @@
+# Install brew
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+
+# Install composer
+brew install homebrew/php/composer
+
+### PHPCS
+composer global require "squizlabs/php_codesniffer=*"
+
+# Add to your .bash_profile
+export PATH=$PATH:~/.composer/vendor/bin
+
+#### WordPress Coding Standards
+composer global require "wp-coding-standards/wpcs"
+phpcs --config-set installed_paths $HOME/.composer/vendor/wp-coding-standards/wpcs
+phpcs --config-set default_standard WordPress-Extra
