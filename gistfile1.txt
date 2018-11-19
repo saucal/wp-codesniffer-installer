@@ -9,6 +9,8 @@ composer global require "squizlabs/php_codesniffer=*"
 
 # Add to your .bash_profile
 export PATH=$PATH:~/.composer/vendor/bin
+ln -s ~/.composer/vendor/squizlabs/php_codesniffer/bin/phpcs /usr/local/bin/phpcs
+ln -s ~/.composer/vendor/squizlabs/php_codesniffer/bin/phpcbf /usr/local/bin/phpcbf
 
 #### WordPress Coding Standards
 composer global require "wp-coding-standards/wpcs"
