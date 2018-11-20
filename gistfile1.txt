@@ -16,3 +16,4 @@ ln -s ~/.composer/vendor/squizlabs/php_codesniffer/bin/phpcbf /usr/local/bin/php
 composer global require "wp-coding-standards/wpcs"
 phpcs --config-set installed_paths $HOME/.composer/vendor/wp-coding-standards/wpcs
 phpcs --config-set default_standard WordPress-Extra
+phpcs --config-set show_warnings 0
