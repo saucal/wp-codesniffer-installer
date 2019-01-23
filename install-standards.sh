@@ -24,6 +24,7 @@ ln -s $HOME/.composer/vendor/squizlabs/php_codesniffer/bin/phpcbf /usr/local/bin
 
 #### PHPCompatibility
 composer global require "phpcompatibility/php-compatibility"
+phpcs --config-set installed_paths $HOME/.composer/vendor/phpcompatibility/php-compatibility
 
 #### WordPress Coding Standards
 composer global require "wp-coding-standards/wpcs"
