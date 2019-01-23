@@ -22,12 +22,12 @@ ln -s $HOME/.composer/vendor/squizlabs/php_codesniffer/bin/phpcs /usr/local/bin/
 rm /usr/local/bin/phpcbf
 ln -s $HOME/.composer/vendor/squizlabs/php_codesniffer/bin/phpcbf /usr/local/bin/phpcbf
 
+phpcs --config-set installed_paths $HOME/.composer/vendor
+
 #### PHPCompatibility
 composer global require "phpcompatibility/php-compatibility"
-phpcs --config-set installed_paths $HOME/.composer/vendor/phpcompatibility/php-compatibility
 
 #### WordPress Coding Standards
 composer global require "wp-coding-standards/wpcs"
-phpcs --config-set installed_paths $HOME/.composer/vendor/wp-coding-standards/wpcs
 phpcs --config-set default_standard WordPress-Extra
 phpcs --config-set show_warnings 0
