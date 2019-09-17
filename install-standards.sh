@@ -32,5 +32,6 @@ composer global require "phpcompatibility/php-compatibility"
 
 #### WordPress Coding Standards
 composer global require "wp-coding-standards/wpcs"
+composer global require "automattic/vipwpcs"
 phpcs --config-set default_standard WordPress-Extra
 phpcs --config-set show_warnings 0
