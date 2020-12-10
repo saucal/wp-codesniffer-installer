@@ -15,7 +15,7 @@ then
 	exit 1
 fi
 
-php $EXPECTED_SIGNATURE.php
+php $EXPECTED_SIGNATURE.php --install-dir=/usr/local/bin --filename=composer
 php -r "unlink('$EXPECTED_SIGNATURE.php');"
 
 ### PHPCS
