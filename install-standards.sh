@@ -28,14 +28,7 @@ ln -s $HOME/.composer/vendor/squizlabs/php_codesniffer/bin/phpcbf /usr/local/bin
 phpcs --config-set installed_paths $HOME/.composer/vendor
 
 #### PHPCompatibility
-composer global require "phpcompatibility/php-compatibility"
-
-#### WordPress Coding Standards
-composer global require "wp-coding-standards/wpcs"
-composer global require "automattic/vipwpcs"
-
-#### WooCommerce Coding Standards
-composer global require "woocommerce/woocommerce-sniffs"
+composer global require "phpcompatibility/php-compatibility" "wp-coding-standards/wpcs" "automattic/vipwpcs" "woocommerce/woocommerce-sniffs"
 
 phpcs --config-set default_standard WordPress-Extra
 phpcs --config-set show_warnings 1
