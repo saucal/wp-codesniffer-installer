@@ -1,7 +1,7 @@
 #!/bin/sh
 
 ## Move to home directory
-cd $HOME
+cd "${HOME}" || exit 1
 
 ### Install Composer
 EXPECTED_SIGNATURE="$(php -r "echo file_get_contents('https://composer.github.io/installer.sig');")"
@@ -15,7 +15,7 @@ then
 	exit 1
 fi
 
-php $EXPECTED_SIGNATURE.php --install-dir=/usr/local/bin --filename=composer
+php "$EXPECTED_SIGNATURE.php" --install-dir=/usr/local/bin --filename=composer
 php -r "unlink('$EXPECTED_SIGNATURE.php');"
 
 ### PHPCS
