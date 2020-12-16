@@ -5,7 +5,7 @@
 
 ## Installation
 
-### MacOS (potentially linux, needs testing)
+### MacOS / Linux
 ```
 curl https://raw.githubusercontent.com/saucal/wp-codesniffer-installer/master/install-standards.sh | bash
 ```
@@ -15,9 +15,7 @@ curl https://raw.githubusercontent.com/saucal/wp-codesniffer-installer/master/in
 If you don't have composer, install it with the setup exe file from their [site](https://getcomposer.org/Composer-Setup.exe). Then:
 
 ```
-composer global require "dealerdirect/phpcodesniffer-composer-installer"
-composer global require "phpcompatibility/php-compatibility"
-composer global require "wp-coding-standards/wpcs"
-composer global require "automattic/vipwpcs"
+composer global require -W "dealerdirect/phpcodesniffer-composer-installer:0.7.0" "phpcompatibility/php-compatibility" "wp-coding-standards/wpcs" "automattic/vipwpcs" "woocommerce/woocommerce-sniffs"
 phpcs --config-set default_standard WordPress-Extra
+phpcs --config-set show_warnings 1
 ```
