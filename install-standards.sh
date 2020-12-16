@@ -26,7 +26,5 @@ rm /usr/local/bin/phpcbf
 ln -s "${GLOBAL_COMPOSER_PATH}/vendor/squizlabs/php_codesniffer/bin/phpcs" /usr/local/bin/phpcs
 ln -s "${GLOBAL_COMPOSER_PATH}/vendor/squizlabs/php_codesniffer/bin/phpcbf" /usr/local/bin/phpcbf
 
-phpcs --config-set installed_paths "${GLOBAL_COMPOSER_PATH}/vendor"
-
 phpcs --config-set default_standard WordPress-Extra
 phpcs --config-set show_warnings 1
