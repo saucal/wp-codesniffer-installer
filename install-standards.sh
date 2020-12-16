@@ -19,7 +19,7 @@ php $EXPECTED_SIGNATURE.php --install-dir=/usr/local/bin --filename=composer
 php -r "unlink('$EXPECTED_SIGNATURE.php');"
 
 ### PHPCS
-composer global require "dealerdirect/phpcodesniffer-composer-installer"
+composer global require -W "dealerdirect/phpcodesniffer-composer-installer" "phpcompatibility/php-compatibility" "wp-coding-standards/wpcs" "automattic/vipwpcs" "woocommerce/woocommerce-sniffs"
 GLOBAL_COMPOSER_PATH=$(composer global config home --quiet)
 rm /usr/local/bin/phpcs
 rm /usr/local/bin/phpcbf
@@ -27,9 +27,6 @@ ln -s "${GLOBAL_COMPOSER_PATH}/vendor/squizlabs/php_codesniffer/bin/phpcs" /usr/
 ln -s "${GLOBAL_COMPOSER_PATH}/vendor/squizlabs/php_codesniffer/bin/phpcbf" /usr/local/bin/phpcbf
 
 phpcs --config-set installed_paths "${GLOBAL_COMPOSER_PATH}/vendor"
-
-#### PHPCompatibility
-composer global require "phpcompatibility/php-compatibility" "wp-coding-standards/wpcs" "automattic/vipwpcs" "woocommerce/woocommerce-sniffs"
 
 phpcs --config-set default_standard WordPress-Extra
 phpcs --config-set show_warnings 1
