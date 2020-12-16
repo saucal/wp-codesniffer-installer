@@ -19,7 +19,7 @@ php $EXPECTED_SIGNATURE.php --install-dir=/usr/local/bin --filename=composer
 php -r "unlink('$EXPECTED_SIGNATURE.php');"
 
 ### PHPCS
-composer global require -W "dealerdirect/phpcodesniffer-composer-installer" "phpcompatibility/php-compatibility" "wp-coding-standards/wpcs" "automattic/vipwpcs" "woocommerce/woocommerce-sniffs"
+composer global require -W "dealerdirect/phpcodesniffer-composer-installer:0.7.0" "phpcompatibility/php-compatibility" "wp-coding-standards/wpcs" "automattic/vipwpcs" "woocommerce/woocommerce-sniffs"
 GLOBAL_COMPOSER_PATH=$(composer global config home --quiet)
 rm /usr/local/bin/phpcs
 rm /usr/local/bin/phpcbf
