@@ -23,8 +23,8 @@ fi
 ### PHPCS
 composer global require -W "dealerdirect/phpcodesniffer-composer-installer:0.7.0" "phpcompatibility/php-compatibility" "wp-coding-standards/wpcs" "automattic/vipwpcs" "woocommerce/woocommerce-sniffs" "automattic/phpcs-neutron-ruleset"
 GLOBAL_COMPOSER_PATH=$(composer global config home --quiet)
-rm /usr/local/bin/phpcs
-rm /usr/local/bin/phpcbf
+rm -f /usr/local/bin/phpcs
+rm -f /usr/local/bin/phpcbf
 ln -s "${GLOBAL_COMPOSER_PATH}/vendor/squizlabs/php_codesniffer/bin/phpcs" /usr/local/bin/phpcs
 ln -s "${GLOBAL_COMPOSER_PATH}/vendor/squizlabs/php_codesniffer/bin/phpcbf" /usr/local/bin/phpcbf
 
