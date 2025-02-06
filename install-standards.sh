@@ -21,7 +21,7 @@ if [ -z "$(which composer)" ]; then
 fi
 
 PACKAGES_TO_REMOVE=();
-PACKAGES_TO_INSTALL=( "dealerdirect/phpcodesniffer-composer-installer" "phpcompatibility/php-compatibility:dev-develop" "wp-coding-standards/wpcs" "automattic/vipwpcs" );
+PACKAGES_TO_INSTALL=( "dealerdirect/phpcodesniffer-composer-installer" "phpcompatibility/php-compatibility:dev-develop" "wp-coding-standards/wpcs" "automattic/vipwpcs" "slevomat/coding-standard" );
 
 if [ "$1" == "--reset" ]; then
 	if [ -z "$(which jq)" ]; then
